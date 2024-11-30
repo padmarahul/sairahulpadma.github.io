@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sai Rahul Padma Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #6F42C1;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 25px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Sai Rahul Padma</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+			  <li class="nav-item"><a href="#education-section" class="nav-link"><span>Education</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero" style="margin-top: -100px;">
+		<div class="home-slider owl-carousel">
+		  <div class="slider-item">
+			<div class="overlay"></div>
+			<div class="container">
+			  <div class="row justify-content-center align-items-center" style="height: 100vh;">
+				<div class="text col-lg-6 text-center">
+				  <span class="heading" style="font-size: 1.8rem;">Hello!</span>
+				  <h1 class="mb-4 mt-3" style="font-size: 3rem;">I'm <span>Sai Rahul Padma</span></h1>
+	  
+				  <!-- Element to contain animated typing -->
+				  <span id="typing-animation" style="font-size: 2rem;"></span>
+	  
+				  <script>
+					// Initialize the typing animation
+					const typingAnimationElement = document.getElementById('typing-animation');
+	  
+					// Create an array of typing text
+					const typingTexts = [
+					  'Full Stack Java Developer ',
+					  'Software Development Engineer ',
+					  'Back-end Developer ',
+					  'Front-end Developer ',
+					];
+	  
+					// Create a function to display the typing animation for a given text
+					function playTypingAnimation(text) {
+					  // Loop through each character and add it to the element
+					  for (let i = 0; i < text.length; i++) {
+						setTimeout(() => {
+						  typingAnimationElement.textContent += text[i];
+						}, i * 50); // Increase the delay to slow down the typing animation
+					  }
+	  
+					  // Once the animation is complete, reset the text and start over
+					  setTimeout(() => {
+						typingAnimationElement.textContent = '';
+						playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+					  }, text.length * 100);
+					}
+	  
+					// Start the typing animation loop
+					playTypingAnimation(typingTexts[0]);
+				  </script>
+	  
+				  <br><br>
+				  <p>
+					<a href="https://www.linkedin.com/in/rahulpadma/" target="_blank" class="btn btn-primary py-3 px-4">LinkedIn</a>
+					<a href="https://github.com/padmarahul" target="_blank" class="btn btn-primary py-3 px-4">GitHub</a>
+					<a href="https://drive.google.com/file/d/1mB6mf5SKlagZA_ZEvgqXrOxMNYPb1RPM/view?usp=sharing" target="_blank" class="btn btn-white py-3 px-4">Resume</a>
+				  </p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section" style="margin-top: -50px;">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/abtme-small.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Sai Rahul Padma</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Full Stack Java Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span> 3+ Years</span></p>
+										<p><span class="title-s">Location: </span> <span>Texas, USA</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Java</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Spring Boot Microservices</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>React.js</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JavaScript</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>AWS</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>Docker</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Full Stack Java Developer with 3+ years of experience in software development specializing in high- performance applications with a strong foundation in Data Structures, Algorithms, and OOPS. Experienced in financial banking, and retail domains, delivering reliable and optimized solutions.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Full Stack Java Developer &amp; Software Development Engineer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span> Banking, Insurance and Retail &amp; Retail</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Masters in Computer Sciences </span></li>
+									<li class="d-flex"><span></span> <span>Bachelor of Engineering in Electrical Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Telugu</span></li>
+									<li class="d-flex"><span>Programming:</span> <span>Java, Python, SQL, C++</span></li>
+									<li class="d-flex"><span>Web Technologies:</span> <span>HTML, CSS, Bootstrap, TypeScript, JavaScript, AngularJS, ReactJS, Redux, NodeJS</span></li>
+									<li class="d-flex"><span>Frameworks:</span> <span>Spring Boot, Flask, Spark</span></li>
+									<li class="d-flex"><span>Cloud Platforms:</span> <span>AWS, Microsoft Azure, GCP</span></li>
+									<li class="d-flex"><span>DevOps:</span> <span>GIT, GitHub, GitLab, CI/CD, Shell Scripting, Docker, Kubernetes, Jenkins, Windows, Linux</span></li>
+									<li class="d-flex"><span>Other Tools:</span> <span>Hibernate, Maven, Gradle, Kafka, RabbitMQ, Jira, design patterns</span></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Experience</h1>
+					<h2 class="mb-4">Experience</h2>
+					<p>Full Stack Developer with 3+ years of experience specializing in Java and end-to-end software development. Proficient in Java, Python, JavaScript, SQL, Spring Boot, React, and Angular, with expertise in
+						building scalable and high-performance applications. Strong foundation in Data Structures, Algorithms,
+						and Object-Oriented Programming, with good problem-solving skills, solving complex problems and optimizing system performance. Proficient in delivering efficient solutions that increases system reliability.
+						Committed about continuous improvement and driving innovation in fast-paced environments.</p>
+					<div class="row justify-content-center mt-5">
+						<div class="col-md-6 text-center ftco-animate">
+							<p><a href="https://drive.google.com/file/d/1mB6mf5SKlagZA_ZEvgqXrOxMNYPb1RPM/view?usp=sharing" target="_blank" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+						</div>  
+					</div>
+			
+				</div>
+
+        	</div>
+
+			<div class="row">
+				<h1 class="big-4">Professional Experience</h1>
+				<div class="underline"></div>
+			</div>
+			<br>
+		
+		<div class="row">
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Capgemini Technology Services</span>
+						<h2>Full Stack Java Developer- Full Time</h2>
+						<span class="position">Jan 2021 - Aug 2023</span>
+						<p class="mt-4">One of the Top IT companies focuses on helping drive value in three key areas: customer experience, intelligent industry, and enterprise management. As we do this, we help our clients embrace key technologies such as cloud, data, and artificial intelligence, and also work to improve their cybersecurity and environmental impact.
+							<ul>
+								<li>Integrated Thought Machine and Mambu Core Banking Systems into mobile and web channels using Java Spring Boot microservices, achieving a 33% improvement in system eﬀiciency.</li>
+								<br>
+								<li>Utilized AWS, Docker, and Kubernetes for container orchestration, automating deployment, scaling, and manage- ment of cloud-native applications, resulting in a 30% reduction in deployment times and enhanced system security.</li>
+								<li>Developed responsive front-end interfaces for Canadian Western Bank client using ReactJS, focusing on mobile
+									development and responsive design, improving user experience by 40%.</li>
+								<br>
+								<li>Developed robust backend testing using JUnit, Cucumber and front-end testing with Jest, which improved code
+									quality and reduced bugs in production ensuring smoother releases.</li>
+						
+								<li>Integrated message brokers like Apache Kafka and RabbitMQ for eﬀicient data streaming and real-time processing,
+									enhancing the scalability of distributed applications.</li>
+								<br>
+								<li>Preprocessed HL7 FHIR format data on Excel, Python; built SDG models using Python SDN packages, employed Machine Learning; tested predictive power by comparing with test data; achieved ROC AUC of 0.528, and privacy level of 0.7 with CTGAN model.</li>
+						
+								<li>Supported projects through all phases of the Software Development Life Cycle (SDLC), reducing development time
+									by 15% and post-deployment issues by 20% through improved system reliability.</li>
+								<br>
+								<li>Demonstrated strong communication skills by effectively collaborating with cross-functional teams, and ensuring
+									alignment on project goals and timelines.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-12">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">GI Solutions</span>
+						<h2>Frond-End Developer Intern</h2>
+						<span class="position">Feb 2020 - Aug 2020</span>
+						<p class="mt-4">Developing an innovative solutions for a range of customers distributed across New Zealand, Australia, India, USA, Europe.
+							<ul>
+								<li>Implemented an E-Commerce Platform for a retail company based on Java, Spring Boot, and PostgreSQL for
+									effective product management and Customer Relations.</li>
+								<br>
+								<li>Established CI/CD pipelines using Jenkins, Docker, and Kubernetes and decreased deployment time by 40% cutting down on development team‘s work time.</li>
+								<li>Developed a microservices architecture that improved flexibility and modularization, reducing feature integration time by 25% and increasing system scalability.</li>
+								<br>
+								<li>Developed robust backend testing using JUnit, Cucumber and front-end testing with Jest, which improved code
+									quality and reduced bugs in production ensuring smoother releases.</li>
+						
+								<li>Developed responsive front-end components using React, improving user interaction speed by 38% and enhancing functionality across web and mobile interfaces, resulting in a 25% increase in user satisfaction.</li>
+								<br>
+								<li>Played a key role in Agile development processes, contributing to sprint planning, daily stand-ups, and retrospec- tives, ensuring continuous improvement and timely delivery of features.</li>
+						
+								<li>Created user-friendly API documentation using Swagger, simplifying the integration process for external developers and improving overall project maintainability.</li>
+								<br>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+		</div>
+
+		<br>
+		<br>
+    		
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="education-section">
+    	<div class="container">	
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-10 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Education</h1>
+					<h2 class="mb-4">Education</h2>
+				</div>
+			</div>
+			
+			<br>
+			
+				<div class="row">
+					<div class="col-md-12">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">University of North Texas- Denton,Texas, USA</span>
+							<h2>Master of Science in Computer Sciences</h2>
+							<span class="position">August 2023 - December 2024</span>
+							<p class="mt-4">CGPA: 3.9/4.0</p>
+							<span class="position">Learnings</span>
+								<ul>
+									FUNDAMENTALS OF DATABASE SYSTEMS, 
+									COMPUTER ALGORITHMS, 
+									SOFTWARE ENGINEERING,
+									COMPUTER NETWORKS,
+									OPERATING SYSTEMS DESIGN,
+									FUNDAMENTALS OF ARTIFICIAL INTELLIGENCE, 
+									SOFTWARE DEVELOPMENT FOR AI
+								</ul>
+							</p>
+	
+	
+						</div>
+					</div>
+				</div>
+
+		</div>
+   
+	</section>
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>During my time at UNT, I have worked on various projects that helped me sharpen problem solving skills and thinking. Would be happy to hear your thoughts!</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-6 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/padmarahul/partpro-management-system" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj02.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/padmarahul/partpro-management-system" target="_blank">Part Pro Management System Using Full Stack Java Development</a></h3>
+				<p>Designed and developed an automotive parts inventory management system, reducing processing time by 32%.
+					<br>
+				</br>
+					Deployed the application on AWS using Docker, ensuring a secure, scalable, and containerized environment.
+					<br>
+				</br>
+				Created a responsive and user-friendly frontend interface with React JS, CSS, Bootstrap, and Material CSS, ensuring
+a smooth user experience across different devices.
+				<br>
+				</br>
+					Built a full-stack application with Spring Boot microservices, JPA, and MySQL backend, improving data processing
+speed by 20% and integrated SonarQube for continuous code quality checks, improving maintainability by 35%.
+				<p><b>Skills:</b> Java, Spring Boot microservices, JPA, MySQL, CSS, Bootstrap, Material CSS, AWS, Docker, React JS</p>
+				</p>
+				<p><a href="https://github.com/padmarahul/partpro-management-system/blob/main/Project_Reports/PartProManagementSystem-del-2.pdf" target="_blank" class="btn btn-primary py-3 px-5">Report</a></p>
+			</div>
+			
+            </div> 
+		</div>
+          <div class="col-md-6 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/padmarahul/GlassClassification" target="_blank" class="block-20 zoom-effect" style="background-image: url('images/proj01.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/padmarahul/GlassClassification" target="_blank">Glass Classification System Using Machine Learning and AI</a></h3>
+                <p>Developed to classify different types of glass for industrial and research purposes, utilizing both supervised and unsupervised learning methods.
+					<br>
+				</br>
+				Integrated a Flask web interface with React JS to provide a seamless user experience for uploading and classifying glass samples, with real-time feedback on classification results.
+				<br>
+			</br>
+			Optimized the performance and accuracy of the glass classification system by implementing advanced machine learning algorithms and data preprocessing techniques, achieving a 10% improvement in classification accuracy.
+			<br>
+		</br>
+		Deployed the application on AWS using Docker, facilitating eﬀicient handling and processing of image data and
+datasets in a scalable environment.
+				</p>
+				<p><b>Skills:</b> Python, Flask, Machine Learning, Deep Learning, CSS, Bootstrap, Material CSS, AWS, Docker, React JS</p>
+				
+				<p><a href="https://github.com/padmarahul/GlassClassification/blob/main/README.md" target="_blank" class="btn btn-primary py-3 px-5">Report</a></p>
+			</div>
+            </div>
+          </div>
+        </div>
+	<br>
+	  <br>
+	  <br>
+	  <br>
+	  <div class="row justify-content-center">
+		<div class="col-md-7 ftco-animate text-center">
+			<h2>More projects on<span> Github  </span> </h2>
+			<br>
+			<p><a href="https://github.com/padmarahul?tab=repositories" target="_blank" class="btn btn-primary py-3 px-5">GitHub</a></p>
+			</div>
+		</div>
+	</div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:sairahul5583.com" target="_blank">Location</a></h3>
+	            <p><a>Denton, Texas, USA</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:sairahul5583@gmail.com" target="_blank">Contact Number</a></h3>
+	            <p><a>+ 1 669 666 7701</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="mailto:sairahul5583@gmail.com" target="_blank">Email Address</a></h3>
+	            <p><a href="mailto:sairahul5583@gmail.com" target="_blank">sairahul5583@gmail.com</a></p>
+				<p><a href="mailto:sairahulpadma@my.unt.edu" target="_blank">sairahulpadma@my.unt.edu</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4"><a href="https://drive.google.com/file/d/1mB6mf5SKlagZA_ZEvgqXrOxMNYPb1RPM/view?usp=sharing" target="_blank">Download CV</a></h3>
+	            <p><a href="https://drive.google.com/file/d/1mB6mf5SKlagZA_ZEvgqXrOxMNYPb1RPM/view?usp=sharing" target="_blank">Resume</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- Updated Form HTML with better alignment -->
+			<!-- Form HTML with updated styles for proper alignment -->
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2 style="color: white;">Have a Question?</h2>
+					<p>Let's connect!</p>
+					<form action="https://formspree.io/f/xnqeropq" method="POST" style="max-width: 500px; margin: 20px auto; padding: 20px; background-color: #000000; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+						<div style="margin-bottom: 15px; text-align: left;">
+							<label for="email" style="color: white; margin-bottom: 5px;">Your email:</label>
+							<input type="email" name="email" id="email" style="width: 100%; padding: 10px; border: 2px solid #ccc; border-radius: 4px; background-color: white;">
+						</div>
+						<div style="margin-bottom: 20px; text-align: left;">
+							<label for="message" style="color: white; margin-bottom: 5px;">Your message:</label>
+							<textarea name="message" id="message" style="width: 100%; height: 100px; padding: 10px; border: 2px solid #ccc; border-radius: 4px; background-color: white;"></textarea>
+						</div>
+						<button class="btn btn-primary py-3 px-4">Send</button>
+					</form>
+				</div>
+			</div>
+
+
+					
+				
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rahulpadma/" target="_blank"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://github.com/padmarahul" target="_blank"><span class="icon-github"></span></a></li>   
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
