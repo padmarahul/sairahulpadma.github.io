@@ -1,34 +1,20 @@
-name: GitHub Pages Build and Deploy
+name: GitHub Pages Deploy
 
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
-  pull_request:
-    branches:
-      - main  # Optionally run on pull requests
+      - main  # Trigger on pushes to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
+    - name: Checkout the repository
       uses: actions/checkout@v3
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16'  # Use the Node.js version required for your project
-
-    - name: Install Dependencies
-      run: npm install  # Use this if your project uses Node.js
-
-    - name: Build the Project
-      run: npm run build  # Adjust this to your build command (e.g., `npm run build` or `yarn build`)
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build  # Replace with your build output directory (e.g., `dist` or `public`)
+        publish_dir: ./  # Deploy the root directory
